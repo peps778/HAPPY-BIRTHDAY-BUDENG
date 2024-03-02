@@ -1,0 +1,163 @@
+@media screen and (max-width: 720px) {
+
+body {
+  background-color: #f2d2e7; 
+}
+
+
+.box {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  justify-content: center;
+  border-radius: 20px;
+  position: relative; /* Added for stacking context */
+  overflow: hidden; /* Added to clip the gradient animation */
+  backdrop-filter: blur(10px);
+  margin: 0 auto 20px auto;
+  padding: 0 auto 15px auto;
+}
+
+  #flowerBox {
+    background: linear-gradient(-45deg, #ff6ec7, #7873f5, #36d1dc, #ff6ec7); /* Romantic color gradient */
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite; /* Removed twinklingHearts and sparklingDots animations */
+    width: 90%;
+    height: 25rem;
+    margin: 10px auto;
+    border-radius: 20px; /* Added border-radius to match .box */
+    position: relative; /* Added for stacking context */
+    overflow: hidden; /* Added to clip the gradient animation */
+    text-align: center; /* Center the text content */
+    display: flex; /* Added display flex to center the text vertically */
+    align-items: center; /* Center the text vertically */
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  #flower {
+    height: 90%;
+    width: 90%;
+    margin: auto auto;
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Position the image at the top */
+    bottom: 5%; 
+    left: 50%; /* Center the image horizontally */
+   transform: translateX(-50%); 
+    z-index: 2; /* Ensure the image is in front */
+  }
+
+ 
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.sparkle-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  animation: sparkleAnimation 5s infinite, sparkleDelay infinite;
+}
+
+.sparkle-dot::before {
+  content: '♥'; 
+  font-size: 10px; /* Adjust font size to fit the heart shape */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red; /* Heart color */
+}
+
+@keyframes sparkleAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes sparkleDelay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0; /* Ensure the sparkle delay starts with opacity 0 */
+  }
+}
+
+#container {
+  display: flex;
+  margin: 21rem auto 0;
+  align-items: flex-end;
+  width: 90%;
+  text-align: center;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid pink;
+}
+#fyt {
+  margin: 0 auto;
+  z-index: 5;
+  font-size: 1.4rem;
+  padding: 2px;
+  font-family: 'Pacifico', cursive;
+  color: floralwhite;
+}
+
+/********/
+
+#message {
+  background-color: #f8f0e3; 
+  width: 90%;
+  height: auto;
+  margin: 2rem auto 1rem auto;
+  border: 2px solid #d4b58e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3d3522; 
+  border-radius: 10px;
+  font-family: 'Dancing Script', cursive;
+}
+
+
+.Tmsg {
+      margin: 1rem 1rem;
+      text-align: justify;
+    }
+    
+#titleBox {
+  
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid pink;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+#title {
+  font-size: 1.3rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+}
+@media screen and (min-width: 720px) {
+  body {
+    display: none;
+  }
+}

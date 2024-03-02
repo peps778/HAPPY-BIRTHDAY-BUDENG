@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HAPPY BIRTHDAY M'LADY!!!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    </script>
+     
+</head>
+<body>
+<div id="parent">
+   <div class="purple" id="rectangle">
+        <img id="dp" src="profile.jpg" alt="file not found">
+        
+        
+        
+        <h5 id="greetings">My babi, happy birthday! I hope your day is as lovely and radiant as your grin. Cheers to an infinite year filled with happiness, humor, and love.</h5>
+   </div> 
+             
+    <div class="boxes" id="remarks">
+        <div class="label" id="remarksTitle">
+             REMARKS
+        </div>
+        <div class="whiteBox" id="remarksContainer">
+            <p id="remark">     Hi babi, happy and blessed birthday to you! A short remark here, highlighting my page—I dedicated this just for you, your friends’ greetings are also here. This page only features ambiguous content. But I made a login system in order for you to see the contents that are made just for you—Take care and enjoy your day. Again happy birthday, I love you so much, my buding💗. In addition, I want to highlight the skills of Akang, Ira, Angelyne for keeping it confidential upon taking their greetings, especially wincis&nbsp;<i>mamaw ya, du nd pa ma danlog HAHAHAH</i>.</p>
+        </div>
+   </div>            
+             
+      
+  <div class="friendContainer">
+  <div class="friendBox" onclick="displayMessage('Ira', this)">
+    <img class="them" src="card.png" alt="image failed to load">
+    <p class="names">IRA</p>
+  </div>
+  
+  <div class="friendBox" onclick="displayMessage('Angelyne', this)">
+    <img class="them" src="card.png" alt="image failed to load">
+    <p class="names">Angelyne</p>
+  </div>
+
+  <div class="friendBox" onclick="displayMessage('Wincis', this)">
+    <img class="them" src="card.png" alt="image failed to load">
+    <p class="names">Wincis</p>
+  </div>
+</div>
+
+             
+   <div class="boxes" id="messageBox">
+        <div class="label" id="messageTitle">   
+            MESSAGE BOX
+        </div>   
+        <div class="whiteBox" id="textContainer">
+        
+            <!-- words -->        
+        </div>   
+        <button id="clearButton" onclick="clearMessage()">CLEAR</button>
+   </div>
+              
+         
+         
+
+             
+             
+             
+   <div class="boxes" id="loginForm">
+        <div class="wrapper">
+            <div class="title">
+               Secret
+            </div>
+            <form id="loginForm">
+                <div class="field">
+                    <input type="text" id="usernameInput" required>
+                    <label>Username...</label>
+                </div>           
+                <div class="field">
+                    <input type="password" id="passwordInput" required>
+                    <label>Password...</label>
+                    <span class="password-toggle" onclick="togglePasswordVisibility()">🙉</span>
+                </div>            
+                <div class="field">
+                    <input type="button" value="Login" onclick="validateLogin()">
+                </div>   
+            </form>        
+        </div>
+    </div>
+ 
+</div>  
+</body>
+<footer>
+     &nbsp;
+</footer>
+</html>
+
+
